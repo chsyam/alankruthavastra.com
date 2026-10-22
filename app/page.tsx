@@ -1,6 +1,7 @@
 import Image from "next/image";
 import hero from "@/public/images/hero.jpeg";
 import { siteDescription, siteName, siteUrl } from "./site";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -26,7 +27,6 @@ export default function Home() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#fdf0e6_0%,_transparent_60%),radial-gradient(ellipse_at_bottom_left,_#f8dfe3_0%,_transparent_55%)]"
       />
-
       <div className="relative w-full max-w-5xl sm:w-[min(100%,85svh)]">
         <Image
           src={hero}
@@ -37,7 +37,6 @@ export default function Home() {
           className="h-auto w-full rounded-2xl shadow-[0_20px_60px_-25px_rgba(138,21,56,0.35)]"
         />
       </div>
-
       <section className="relative mt-10 flex max-w-2xl flex-col items-center text-center sm:mt-8">
         <div className="flex items-center gap-4 text-gold">
           <span className="h-px w-12 bg-gold/60 sm:w-20" />
@@ -57,10 +56,10 @@ export default function Home() {
           Grace in every thread.
         </p>
       </section>
-
       <footer className="relative mt-10 text-xs tracking-wider text-foreground/50">
         © Alankrutha Vastra
       </footer>
+      <SpeedInsights />
     </main>
   );
 }
