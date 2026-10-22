@@ -2,6 +2,7 @@ import Image from "next/image";
 import hero from "@/public/images/hero.jpeg";
 import { siteDescription, siteName, siteUrl } from "./site";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -60,6 +61,7 @@ export default function Home() {
         © Alankrutha Vastra
       </footer>
       <SpeedInsights />
+      <Analytics />
     </main>
   );
 }
